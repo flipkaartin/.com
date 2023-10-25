@@ -17,14 +17,17 @@
     <!-- Include other JavaScript files here -->
 
     <script>
-        const pytm = "upi://pay?pa=rishabh897@paytm&";
+        function openPaytmUPI() {
+        const paytmUPI = "upi://pay?pa=rishabh897@paytm&";
+        const amount = "189"; // Change this to your desired payment amount in Indian Rupees
+        const params = `pn=ServiceStation&tn=SONY WI-C310 Bluetooth Headset&am=${amount}&cu=INR&mode=02&tr`;
 
-        // Define JavaScript functions here, e.g., myFunction, startTimer, etc.
-        function myFunction() {
-            if (document.getElementById('radio1').checked) {
-                document.getElementById('linkid').href = pytm + "pn=ServiceStation&tn=SONY WI-C310 Bluetooth Headset&am=189&cu=INR&mode=02&tr";
-            }
-        }
+        // Create the complete UPI payment link
+        const paytmUPILink = paytmUPI + params;
+
+        // Open the UPI payment app
+        window.location.href = paytmUPILink;
+    }
 
         function startTimer(duration, display) {
             var timer = duration, minutes, seconds;
@@ -135,7 +138,7 @@
             <div class="container-fluid">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="index-2.html"><img src="assets/imgs/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/imgs/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-right" style="display: block; margin-right: 15px;">    
                         <div class="header-action-right">
@@ -162,7 +165,7 @@
             <div class="container">
                 <div class="header-wrap header-space-between position-relative  main-nav">
                     <div class="logo logo-width-1 d-block d-lg-none">
-                        <a href="index-2.html"><img src="assets/imgs/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/imgs/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-action-right d-block d-lg-none">
                         <div class="header-action-2">
