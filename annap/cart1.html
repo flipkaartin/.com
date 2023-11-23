@@ -1,3 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cart Payment</title>
+    <!-- Include necessary stylesheets and scripts here -->
+</head>
+<body>
+
+<div>
+    <h1>Cart Payment</h1>
+    <p>Amount: ₹189</p>
+    
+    <!-- UPI Payment Button -->
+    <button onclick="makeUPIPayment()">Pay with UPI</button>
+
+    <p id="payment-status"></p>
+</div>
+
+<script>
+    function makeUPIPayment() {
+        // Replace this with the actual UPI ID you want to use
+        const receiverUPI = "7464823059@kotak";
+
+        // Generate a random transaction ID (you may use a more sophisticated method)
+        const transactionId = Math.floor(Math.random() * 1000000).toString();
+
+        // Construct UPI payment link
+        const upiPaymentLink = `upi://pay?pa=${receiverUPI}&pn=ServiceStation&tn=SONY WI-C310 Bluetooth Headset&am=189&cu=INR&mode=02&tr=${transactionId}`;
+
+        // Open the UPI app with the generated payment link
+        window.location.href = upiPaymentLink;
+
+        // Inform the user that the payment process has started
+        document.getElementById("payment-status").innerText = "Payment process initiated. Please check your UPI app.";
+    }
+</script>
+
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en">
