@@ -23,36 +23,54 @@
 
     <!-- Add the following script to integrate QR code and UPI payment -->
     <script>
-        const upiId = 'rishabhsisodiya1998@ybl';
+         <script>
 
-        function openUpiApp(amount) {
-            const paymentUrl = 'https://example.com/upi-payment-url';
-            const intentUrl = `${paymentUrl}?pa=${upiId}&pn=ServiceStation&tn=Product Name&am=${amount}&cu=INR&mode=02&tr=`;
-
-            // Open the UPI payment URL
-            window.location.href = intentUrl;
-        }
-
-        function handlePaymentClick() {
-            if (document.getElementById('radio1').checked) {
-                const amount = '349'; // Use the actual product amount here
-
-                // Update the src attribute of the QR code with the dynamic amount
-                document.querySelector('.qr-code').src = `https://api.qrserver.com/v1/create-qr-code/?data=${amount}&size=150x150`;
-
-                // Check if the user is on a mobile device
-                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-                if (isMobile) {
-                    openUpiApp(amount);
-                } else {
-                    // For PC, show the QR code
-                    document.querySelector('.qr-code').style.display = 'block';
-                }
-            } else {
-                alert('Please select a valid payment method.');
+    const pytm = "upi://pay?pa=rishabh897@paytm&";
+    
+    </script><html class="no-js" lang="en">
+    <script>
+    function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+    display.text(minutes + "min " + seconds+ "sec" );
+    
+    if (--timer < 0) {
+        timer = duration;
+    }
+    }, 1000);
+    }
+    </script></body>
+    <script type="text/javascript">
+    $(function() {
+    $('#product-rating').barrating({
+    theme: 'fontawesome-stars'
+    });
+    $('product-rating').barrating('show');
+    $('product-rating').barrating('set', '4');
+    });
+    $( document ).ready(function() {
+    
+    startTimer(500-120, $('#offerend-time'));
+    });
+    </script>
+    <script>
+        function myFunction() {
+    
+            if(document.getElementById('radio1').checked) {
+                document.getElementById('linkid').href = pytm+"pn=ServiceStation&tn=PHILIPS BT1233/18 Trimmer &am=349&cu=INR&mode=02&tr'";
             }
+    
+         
+    
+          
         }
+    </script>
     </script>
 
     <!-- Add the following HTML for the QR code -->
