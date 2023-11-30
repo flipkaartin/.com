@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2874f0;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        main div {
+            width: 45%;
+            margin: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2874f0;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .common-button {
+            background: rgb(251, 100, 27);
+            display: inline-block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* Updated styles for the timer */
+        #timer {
+            color: #4ef700; /* Dark orange color */
+            font-size: 1.2em; /* Adjust the font size */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Product Details</h1>
+    </header>
+
+    <main>
+        <div>
+            <img src="imgqr/baot499.jpg" alt="Product Image">
+        </div>
+
+        <div>
+            <h2>boAt Aavante Bar 3100D</h2>
+            <p>boAt Aavante Bar 3100D 260 W Bluetooth Soundbar (Premium Black, 5.1 Channel)</p>
+            <p>Price: ₹499 <span>(Original Price: ₹29990)</span></p>
+            <p>Quantity: 1</p>
+        </div>
+    </main>
+
+    <section>
+        <h2>Payment Options</h2>
+        <!-- Include the QR code image for payment here -->
+        <img src="qrImg/499.png" alt="UPI QR Code">
+    </div>
+</section>
+    
+<footer>
+    <p>Amount Payable: ₹499</p>
+    <p id="timer">Payment time remaining: 5:00</p>
+</footer>
+
+<script>
+    // Set the timer for 5 minutes (300 seconds)
+    let timeRemaining = 300;
+
+    // Update the timer every second
+    let timerInterval = setInterval(function () {
+        let minutes = Math.floor(timeRemaining / 60);
+        let seconds = timeRemaining % 60;
+
+        // Display the time remaining
+        document.getElementById("timer").innerHTML = `Payment time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        // Decrement the time remaining
+        timeRemaining--;
+
+        // Check if the timer has expired
+        if (timeRemaining < 0) {
+            clearInterval(timerInterval);
+            document.getElementById("timer").innerHTML = "Payment time has expired.";
+            document.getElementById("qrCodeContainer").style.display = "none"; // Hide the QR code
+        }
+    }, 1000);
+</script>
+</body>
+
+</html>
