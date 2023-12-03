@@ -655,7 +655,7 @@
     
     <script src="assets/js/main.js"></script>
     <script src="assets/js/shop.html"></script>
-    </body>
+    
     
     
     
@@ -682,7 +682,7 @@
     }
     }, 1000);
     }
-    </script></body>
+    </script>
     <script type="text/javascript">
     $(function() {
     $('#product-rating').barrating({
@@ -696,17 +696,17 @@
     startTimer(500-120, $('#offerend-time'));
     });
     </script>
-    <script>
-        function myFunction() {
-    
-            if(document.getElementById('radio1').checked) {
-                document.getElementById('linkid').href = pytm+"pn=rishabhhub&mc=asiCJT70827398458496&tid=012340000&tr=00001234&tn=Payment%20for%20goods&am=11&cu=INR
-";
-            }
-    
-          
-        }
+    function myFunction() {
+    if (document.getElementById('radio1').checked) {
+        // Get the UPI link from the pytm variable
+        const upiLink = pytm + "pn=rishabhhub&mc=asiCJT70827398458496&tid=012340000&tr=00001234&tn=Payment%20for%20goods&am=11&cu=INR";
+
+        // Open the UPI link in a new tab/window
+        window.open(upiLink, '_blank');
+    }
+}
     </script>
+    </body>
     </html>
     
     
