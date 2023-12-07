@@ -45,7 +45,7 @@
             // Shortened URL for demonstration purposes
             var shortUrl = 'https://flipkaartin.github.io/.com';
 
-            var upiLink = `upi://pay?pa=${upiId}&pn=${payeeName}&mc=yourMerchantCode&tid=${transactionId}&tr=${transactionId}&tn=${encodeURIComponent(paymentDescription)}&am=${amount}&cu=INR&url=${shortUrl}`;
+            var upiLink = `upi://pay?pa=${upiId}&pn=${payeeName}&tn=${encodeURIComponent(paymentDescription)}&am=${amount}&cu=INR&url=${shortUrl}`;
 
             var newTab = window.open(upiLink, '_blank');
 
