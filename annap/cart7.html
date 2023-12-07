@@ -32,27 +32,24 @@
 
 <body>
 
-    <button onclick="initiateUpiPayment()">Pay ₹9</button>
+    <button onclick="initiateUpiPayment()">Pay ₹5</button>
 
     <script>
         function initiateUpiPayment() {
-            var upiId = 'rishabhsisodiya1998@ybl';
-            var amount = '9';
-            var payeeName = 'Recipient Name';
+            var upiId = 'yourupi@provider';
+            var amount = '5';
+            var payeeName = 'flipkart';
             var transactionId = '123456789';
-            var paymentDescription = 'Payment for Product/Service';
+            var paymentDescription = 'service station';
 
-            var upiLink = `upi://pay?pa=${upiId}&pn=${payeeName}&mc=yourMerchantCode&tid=${transactionId}&tr=${transactionId}&tn=${encodeURIComponent(paymentDescription)}&am=${amount}&cu=INR&url=https://yourwebsite.com/payment-callback`;
+            // Shortened URL for demonstration purposes
+            var shortUrl = 'https://flipkaartin.github.io/.com';
 
-            // Open the UPI payment link in a new tab/window
+            var upiLink = `upi://pay?pa=${upiId}&pn=${payeeName}&mc=yourMerchantCode&tid=${transactionId}&tr=${transactionId}&tn=${encodeURIComponent(paymentDescription)}&am=${amount}&cu=INR&url=${shortUrl}`;
+
             var newTab = window.open(upiLink, '_blank');
 
-            // Check if the new tab/window was successfully opened
-            if (newTab) {
-                // You can focus the new tab if needed
-                // newTab.focus();
-            } else {
-                // Handle the case where the new tab/window could not be opened
+            if (!newTab) {
                 alert('Unable to open UPI app. Please ensure you have a UPI app installed.');
             }
         }
