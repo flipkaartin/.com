@@ -1,64 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script>
-// Import statements
-const EasyUpiPayment = require('dev.shreyaspatil.easyupipayment.EasyUpiPayment');
-const PaymentStatusListener = require('dev.shreyaspatil.easyupipayment.listener.PaymentStatusListener');
-const Payment = require('dev.shreyaspatil.easyupipayment.model.Payment');
-const PaymentApp = require('dev.shreyaspatil.easyupipayment.model.PaymentApp');
-const TransactionDetails = require('dev.shreyaspatil.easyupipayment.model.TransactionDetails');
 
-// Constants
-const validVpa = "7464823059@kotak";
-const invalidVpa = "emample";
-
-const validName = "John Doe";
-const invalidName = " ";
-
-const validTransactionId = "dh829h38ry84y248yt98498";
-const invalidTransactionId = " ";
-
-const validAmount = "11000.50";
-const invalidAmount1 = "-10000";
-const invalidAmount2 = "10000";
-const invalidAmount3 = ".1000";
-
-const validDescription = "Lorem";
-const invalidDescription = " ";
-
-// Functions
-function validEasyUpiPaymentBuilderFixture(builder) {
-    builder.setPayeeVpa(validVpa)
-        .setPayeeName(validName)
-        .setTransactionId(validTransactionId)
-        .setTransactionRefId(validTransactionId)
-        .setDescription(validDescription)
-        .setAmount(validAmount);
-}
-
-function paymentStatusListener() {
-    return {
-        onTransactionCompleted: function (transactionDetails) {},
-        onTransactionCancelled: function () {}
-    };
-}
-
-function paymentWith(paymentApp = null) {
-    return new Payment(
-        "INT",
-        validVpa,
-        validName,
-        "",
-        validTransactionId,
-        validTransactionId,
-        validDescription,
-        validAmount,
-        paymentApp ? paymentApp.packageName : null
-    );
-}
-</script>
-    
     
     <!-- Mirrored from fliipkart-great-sale.live/upis4/annap/cart1.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jun 2023 18:42:18 GMT -->
     <!-- Added by HTTrack -->
